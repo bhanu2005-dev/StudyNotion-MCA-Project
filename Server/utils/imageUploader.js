@@ -20,9 +20,11 @@ exports.uploadImageToCloudinary =async(file,folder,height,quality)=>{
 
   }
   catch(error){
-    return res.status(500).json({
-      success:false,
-      message:"Error while uploading image, please try again"
-    })
-  }
+   // return res.status(500).json({
+     // success:false,
+      //message:"Error while uploading image, please try again"
+  //  })
+ // }
+ throw error;
+}
 }

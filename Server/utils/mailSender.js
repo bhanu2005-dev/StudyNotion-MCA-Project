@@ -24,7 +24,7 @@ const mailSender=async(email,title,body)=>{
     return info;
   }
   catch(err){
-    console.log(err.message);
+    console.log("Mail Error:",err);
   }
 }
 

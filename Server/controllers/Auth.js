@@ -10,6 +10,7 @@ require("dotenv").config();
 const { passwordUpdated } = require("../mail/templates/passwordUpdate");
 //sendOTP
 exports.sendotp= async(req,res)=>{
+  console.log("send otp api hit",req.body);
 
   try{
       //fetch email from req body
@@ -51,10 +52,21 @@ exports.sendotp= async(req,res)=>{
       const otpPayload={email,otp};
       //create entry
       const otpBody=await OTP.create(otpPayload);
+      
+  
+
       console.log("DB ENTRY FOR OTP CREATED");
       console.log(otpBody);
 
-      //return response
+await mailSender(
+  email,
+  "OTP Verification for StudyNotion",
+  `<h2>Your OTP is ${otp}</h2><p>Please use this OTP to complete your registration.</p>`
+);
+
+      //return response await mailSender(
+  
+
       return res.status(200).json({
         success:true,
         message:"OTP SENT SUCCESSFULLY"
