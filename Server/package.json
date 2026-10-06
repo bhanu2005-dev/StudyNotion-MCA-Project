@@ -2,8 +2,8 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "engines":{
-    "node":"20.x"
+  "engines": {
+    "node": "20.x"
   },
   "main": "index.js",
   "scripts": {
