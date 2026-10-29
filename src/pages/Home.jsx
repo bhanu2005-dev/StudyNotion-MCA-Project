@@ -25,7 +25,7 @@ function Home() {
       text2: "Click proceed to go ahead",
       btn1Text: "Proceed",
       btn2Text: "Cancel",
-      btn1Handler: () => {window.location.href="https://github.com/ash956901/StudyNotion"},
+      btn1Handler: () => {window.location.href="https://github.com/bhanu2005-dev/StudyNotion-MCA-Project"},
       btn2Handler: () => setConfirmationModal(null),
     })
   },[])
